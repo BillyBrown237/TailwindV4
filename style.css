@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:wght@400;700&display=swap');
+
+:root {
+    --orange-500: 25, 97%, 53%;
+    --white: 0, 100%, 100%;
+    --grey-500: 217, 12%, 63%;
+    --grey-900: 213, 19%, 18%;
+    --grey-950: 216, 12%, 8%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    height: 100%;
+    font-family: 'Overpass', sans-serif;
+    font-size: 15px;
+    background-color: hsl(var(--grey-950));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+button {
+    border: none;
+}
+
+button:active{
+    background-color: hsl(var(--white));
+}
+/*<!-- Rating state start -->*/
+
+.container {
+    background-color: hsl(var(--grey-900));
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: fit-content;
+    padding: 35px;
+    border-radius: 20px;
+    gap: 20px;
+}
+
+.rating-star {
+    display: flex;
+    align-items: center;
+    background-color: hsl(var(--grey-950),0.4);
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    padding: 17px;
+}
+
+.star {
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+    object-fit: contain;
+}
+
+.title {
+    text-align: start;
+    color: hsl(var(--white));
+}
+
+.description {
+    color: hsl(var(--grey-500));
+}
+
+.rating-buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.rating {
+    background-color: hsl(var(--grey-950),0.4);
+    height: 50px;
+    width: 50px;
+    color: hsl(var(--grey-500));
+    border-radius: 50%;
+    font-weight: 700;
+}
+.rating:hover{
+    background-color: hsl(var(--orange-500));
+    color: hsl(var(--grey-950));
+}
+.rating:active{
+    background-color: hsl(var(--white));
+}
+.rating.active {
+    background-color: hsl(var(--white));
+}
+
+.submit-button {
+    background-color: hsl(var(--orange-500));
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 15px;
+    letter-spacing: 2px;
+    border-radius: 20px;
+}
+
+/*<!-- Rating state end -->*/
+/*<!-- Thank you state start -->*/
+.thanks{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.feedback{
+    background-color: hsl(var(--grey-950),0.4);
+    padding: 8px 15px;
+    border-radius: 20px;
+    color: hsl(var(--orange-500));
+    width: fit-content;
+}
+.feedbacks{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.feedback-heading{
+    text-align: center;
+    color: hsl(var(--white));
+    letter-spacing: 2px;
+}
+.feedback-text{
+    text-align: center;
+    color: hsl(var(--grey-500));
+}
